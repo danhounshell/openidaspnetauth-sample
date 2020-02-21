@@ -1,7 +1,7 @@
 # openidaspnetauth-sample
-An old same application showing using OpenId authentication with ASP.NET Auth
+An old sample application showing usage of OpenId authentication with ASP.NET Auth
 
-Note: everything following is from the old readme. Links, sites, etc. may no longer exist or be the same. 
+*Note: everything following is from the old readme. Links, sites, etc. may no longer exist or be the same.*
 
 OpenID Sample ASP.NET Web Application
 
