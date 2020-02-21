@@ -6,7 +6,7 @@ An old sample application showing usage of OpenId authentication with ASP.NET Au
 OpenID Sample ASP.NET Web Application
 
 By Dan Hounshell
-http://danhounshell.com/blogs/dan/archive/2008/10/08/sample-openid-web-site.aspx
+http://danhounshell.com/blog/sample-openid-web-site/
 
 
 This is a simple little web site with a login form consisting of built-in ASP.NET membership controls and an OpenID login control that works with ASP.NET membership.
@@ -30,5 +30,5 @@ Note: if you are going to use an existing ASP.NET membership database you may or
 
 
 * - having you sign up at idSelector.com is not a scam of any sort. You will not get spam email because of signing up there. I will not make any money because you signed up there, etc. You can read more about their javascript OpenID selector tool at the following:
-http://danhounshell.com/blogs/dan/archive/2008/07/18/adding-openid-to-your-web-site-in-conjunction-with-asp-net-membership.aspx
+http://danhounshell.com/blog/adding-openid-to-your-web-site-in-conjunction-with-asp-net-membership/
 http://www.hanselman.com/blog/TheWeeklySourceCode25OpenIDEdition.aspx
