@@ -1,0 +1,73 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="OpenIDSampleApp.Web.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>OpenID Sample Web Site</title>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-2" />
+	<link rel="stylesheet" href="/style.css" type="text/css" />         
+</head>
+<body>
+    <form id="form1" runat="server">
+
+	<div class="content">
+		<div class="header_right">
+			<div class="top_info">
+				<p>
+				    <asp:LoginView ID="LoginView1" runat="server">
+                        <LoggedInTemplate>
+                            Welcome,&nbsp;<%=GetUserName(HttpContext.Current.User.Identity.Name)%>!&nbsp; <asp:LoginStatus ID="ls1" runat="server" />
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            You are not logged in! <asp:LoginStatus ID="ls2" runat="server" /> <asp:HyperLink ID="lnkNewAccount" runat="server" Text="Create Account" NavigateUrl="~/members/join/" />
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                 </p>							
+			</div>							
+		</div>		
+
+		<div class="logo">
+			<h3><a href="/"><b>OpenID Sample Web Site</b></a></h3>
+		</div>
+
+		<br clear="all" />
+
+		<div id="nav">
+    	    <div id="nav-bar">  	    
+        	    <ul>
+      		        <li><a href="#">Home</a></li>
+      		        <li><a href="#">Stuff</a></li>
+                    <li><a href="#">More Stuff</a></li>     		             		              		        
+     		        <li><a href="#">Buy Stuff</a></li>      		        
+          		    <li><a href="#">About</a></li>
+          		    <li><a href="#">Contact</a></li>
+       	 	    </ul>
+  		    </div>
+        </div>
+
+		<div class="subheader">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et diam. Morbi tincidunt risus id 
+			purus. In nec purus at lorem dapibus euismod. Suspendisse velit. Nulla luctus felis sit amet nisl. Praesent 
+			enim. Nam eu elit eget elit fermentum semper. Ut nec dolor. Pellentesque habitant morbi tristique senectus 
+			et netus et malesuada fames ac turpis egestas. Quisque faucibus nunc et ligula. Duis ultrices pretium ipsum. 
+			Nam mi urna, condimentum sit amet, eleifend eget, fringilla a, urna. Fusce consectetuer lorem at diam. Etiam 
+			viverra. Nulla justo. Sed suscipit. Vivamus sit amet nisl. Nunc nec mauris tempus diam blandit dapibus. Donec 
+			luctus eleifend enim. Nullam dapibus purus ut est. <a href="#">Contact Us</a> with 
+			any suggestions you have for the site.</p>
+		</div>
+		
+		<div>		
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+		<div class="footer">
+			<p>&copy; Copyright <%=DateTime.Now.Year%> <a href="http://danhounshell.com/blogs/dan/archive/2008/10/08/sample-openid-web-site.aspx">OpenID Sample Web Site: Dan Hounshell</a>.</p>
+		</div>
+	</div>
+		
+	
+    </form>  
+    
+</body>
+</html>
